@@ -31,5 +31,3 @@ Thumbs.db
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
-# Feed data (build-time generated)
-public/feed-data/
