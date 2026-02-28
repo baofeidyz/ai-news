@@ -15,6 +15,13 @@ interface FeedItemData {
 
 const props = defineProps<{
   item: FeedItemData
+  compact?: boolean
+  active?: boolean
+  readingMode?: boolean
+}>()
+
+const emit = defineEmits<{
+  select: [item: FeedItemData]
 }>()
 
 const { isRead, markAsRead } = useReadStatus()
@@ -47,28 +54,44 @@ function absoluteTime(dateStr: string): string {
 
 function handleClick() {
   markAsRead(props.item.link)
-  window.open(props.item.link, '_blank', 'noopener')
+  if (props.readingMode) {
+    emit('select', props.item)
+  } else {
+    emit('select', props.item)
+  }
 }
 </script>
 
 <template>
-  <article class="feed-item" :class="{ read }" @click="handleClick">
-    <div class="feed-item-header">
-      <span class="source-badge">{{ item.source }}</span>
-      <span class="time" :title="absoluteTime(item.pubDate)">
-        {{ relativeTime(item.pubDate) }}
-      </span>
-    </div>
-    <h3 class="title">
-      <span v-if="!read" class="unread-dot" />
-      {{ item.title }}
-    </h3>
-    <p v-if="item.titleZh" class="title-zh">{{ item.titleZh }}</p>
-    <p v-if="item.description" class="description">{{ item.description }}</p>
-    <p v-if="item.descriptionZh" class="description-zh">{{ item.descriptionZh }}</p>
-    <div class="feed-item-footer">
-      <TranslateButton :title="item.title" :description="item.description" />
-    </div>
+  <article
+    class="feed-item"
+    :class="{ read, compact, active }"
+    @click="handleClick"
+  >
+    <template v-if="compact">
+      <h3 class="title compact-title">
+        <span v-if="!read" class="unread-dot" />
+        {{ item.titleZh || item.title }}
+      </h3>
+    </template>
+    <template v-else>
+      <div class="feed-item-header">
+        <span class="source-badge">{{ item.source }}</span>
+        <span class="time" :title="absoluteTime(item.pubDate)">
+          {{ relativeTime(item.pubDate) }}
+        </span>
+      </div>
+      <h3 class="title">
+        <span v-if="!read" class="unread-dot" />
+        {{ item.title }}
+      </h3>
+      <p v-if="item.titleZh" class="title-zh">{{ item.titleZh }}</p>
+      <p v-if="item.description" class="description">{{ item.description }}</p>
+      <p v-if="item.descriptionZh" class="description-zh">{{ item.descriptionZh }}</p>
+      <div class="feed-item-footer">
+        <TranslateButton :title="item.title" :description="item.description" />
+      </div>
+    </template>
   </article>
 </template>
 
@@ -89,6 +112,42 @@ function handleClick() {
 
 .feed-item.read {
   opacity: 0.6;
+}
+
+.feed-item.compact {
+  padding: 8px 12px;
+  margin-bottom: 2px;
+  border: none;
+  border-radius: 4px;
+  border-left: 3px solid transparent;
+}
+
+.feed-item.compact:hover {
+  background: var(--color-hover);
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.feed-item.compact.active {
+  background: var(--color-active);
+  border-left-color: var(--color-accent);
+  opacity: 1;
+}
+
+.feed-item.compact.read {
+  opacity: 0.5;
+}
+
+.feed-item.compact.active.read {
+  opacity: 1;
+}
+
+.compact-title {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .feed-item-header {

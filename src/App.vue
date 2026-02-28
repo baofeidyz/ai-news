@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import CategoryFilter from './components/CategoryFilter.vue'
 import FeedList from './components/FeedList.vue'
 import LanguageSelector from './components/LanguageSelector.vue'
+import ArticleViewer from './components/ArticleViewer.vue'
 
 interface FeedItem {
   title: string
@@ -32,6 +33,12 @@ const loading = ref(true)
 const error = ref('')
 const sidebarOpen = ref(false)
 
+// Reading mode state
+const readingMode = ref(false)
+const selectedArticle = ref<FeedItem | null>(null)
+const articleList = ref<FeedItem[]>([])
+const articleIndex = ref(0)
+
 onMounted(async () => {
   try {
     const res = await fetch('/feed-data/all-feeds.json')
@@ -46,6 +53,24 @@ onMounted(async () => {
 
 function toggleSidebar() {
   sidebarOpen.value = !sidebarOpen.value
+}
+
+function handleSelectArticle(item: FeedItem, index: number, list: FeedItem[]) {
+  selectedArticle.value = item
+  articleList.value = list
+  articleIndex.value = index
+  readingMode.value = true
+  sidebarOpen.value = false
+}
+
+function handleNavigate(index: number) {
+  articleIndex.value = index
+  selectedArticle.value = articleList.value[index]
+}
+
+function exitReadingMode() {
+  readingMode.value = false
+  selectedArticle.value = null
 }
 </script>
 
@@ -67,17 +92,40 @@ function toggleSidebar() {
     <div v-else-if="error" class="error">{{ error }}</div>
 
     <div v-else-if="feedData" class="app-body">
-      <aside class="sidebar" :class="{ open: sidebarOpen }">
-        <CategoryFilter
-          :categories="feedData.categories"
-          :active="activeCategory"
-          @select="(key: string) => { activeCategory = key; sidebarOpen = false }"
-        />
+      <!-- Sidebar: collapses in reading mode -->
+      <aside class="sidebar" :class="{ collapsed: readingMode, open: sidebarOpen }">
+        <div class="sidebar-inner">
+          <CategoryFilter
+            :categories="feedData.categories"
+            :active="activeCategory"
+            @select="(key: string) => { activeCategory = key; sidebarOpen = false }"
+          />
+        </div>
       </aside>
-      <div class="sidebar-overlay" :class="{ open: sidebarOpen }" @click="sidebarOpen = false" />
-      <main class="main-content">
-        <FeedList :categories="feedData.categories" :active-category="activeCategory" />
-      </main>
+      <div class="sidebar-overlay" :class="{ open: sidebarOpen && !readingMode }" @click="sidebarOpen = false" />
+
+      <!-- List area: full width normally, narrow compact in reading mode -->
+      <div class="list-area" :class="{ compact: readingMode }">
+        <FeedList
+          :categories="feedData.categories"
+          :active-category="activeCategory"
+          :compact="readingMode"
+          :active-article-link="selectedArticle?.link ?? null"
+          @select-article="handleSelectArticle"
+        />
+      </div>
+
+      <!-- Viewer area: hidden normally, expands in reading mode -->
+      <div class="viewer-area" :class="{ active: readingMode }">
+        <ArticleViewer
+          v-if="selectedArticle"
+          :article="selectedArticle"
+          :articles="articleList"
+          :current-index="articleIndex"
+          @navigate="handleNavigate"
+          @close="exitReadingMode"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -148,25 +196,61 @@ function toggleSidebar() {
   flex: 1;
 }
 
+/* Sidebar */
 .sidebar {
   width: 260px;
   flex-shrink: 0;
   border-right: 1px solid var(--color-border);
   background: var(--color-bg-secondary);
-  overflow-y: auto;
   height: calc(100vh - 53px);
   position: sticky;
   top: 53px;
+  overflow: hidden;
+  transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 0;
+  border-right-color: transparent;
+}
+
+.sidebar-inner {
+  width: 260px;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .sidebar-overlay {
   display: none;
 }
 
-.main-content {
+/* List area */
+.list-area {
   flex: 1;
   min-width: 0;
   padding: 20px;
+  transition: flex 0.3s ease, max-width 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+}
+
+.list-area.compact {
+  flex: 0 0 300px;
+  max-width: 300px;
+  padding: 0;
+  border-right: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
+}
+
+/* Viewer area */
+.viewer-area {
+  flex: 0 1 0%;
+  min-width: 0;
+  overflow: hidden;
+  transition: flex 0.3s ease;
+}
+
+.viewer-area.active {
+  flex: 1 1 0%;
 }
 
 .loading, .error {
@@ -195,12 +279,23 @@ function toggleSidebar() {
     left: -280px;
     top: 53px;
     bottom: 0;
+    width: 280px;
     z-index: 200;
     transition: left 0.3s ease;
+    height: auto;
   }
 
-  .sidebar.open {
+  .sidebar.open:not(.collapsed) {
     left: 0;
+  }
+
+  .sidebar.collapsed {
+    left: -280px;
+    width: 280px;
+  }
+
+  .sidebar-inner {
+    width: 280px;
   }
 
   .sidebar-overlay {
@@ -220,8 +315,21 @@ function toggleSidebar() {
     pointer-events: auto;
   }
 
-  .main-content {
+  .list-area {
     padding: 12px;
+    transition: flex 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  }
+
+  .list-area.compact {
+    flex: 0 0 0px;
+    max-width: 0;
+    padding: 0;
+    opacity: 0;
+    border-right: none;
+  }
+
+  .viewer-area.active {
+    flex: 1;
   }
 }
 </style>

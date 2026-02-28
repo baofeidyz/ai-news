@@ -23,6 +23,12 @@ interface Category {
 const props = defineProps<{
   categories: Category[]
   activeCategory: string
+  compact?: boolean
+  activeArticleLink?: string | null
+}>()
+
+const emit = defineEmits<{
+  selectArticle: [item: FeedItemData, index: number, list: FeedItemData[]]
 }>()
 
 const STORAGE_KEY = 'rss-selected-sources'
@@ -141,6 +147,10 @@ const hasMore = computed(() => {
   return paginatedItems.value.length < filteredItems.value.length
 })
 
+const displayItems = computed(() => {
+  return props.compact ? filteredItems.value : paginatedItems.value
+})
+
 function loadMore() {
   currentPage.value++
 }
@@ -150,6 +160,11 @@ function handleMarkAllRead() {
   markAllAsRead(links)
 }
 
+function handleSelectArticle(item: FeedItemData) {
+  const index = filteredItems.value.findIndex(i => i.link === item.link)
+  emit('selectArticle', item, index >= 0 ? index : 0, filteredItems.value)
+}
+
 // Reset page when category changes
 watch(() => props.activeCategory, () => {
   currentPage.value = 1
@@ -157,8 +172,8 @@ watch(() => props.activeCategory, () => {
 </script>
 
 <template>
-  <div class="feed-list">
-    <div class="feed-toolbar">
+  <div class="feed-list" :class="{ compact }">
+    <div v-if="!compact" class="feed-toolbar">
       <span class="item-count">{{ filteredItems.length }} 篇文章</span>
       <div class="source-filter" ref="dropdownRef">
         <button class="source-filter-btn" :class="{ active: activeFilters.length > 0 }" @click="dropdownOpen = !dropdownOpen">
@@ -185,17 +200,27 @@ watch(() => props.activeCategory, () => {
       <button class="mark-all-btn" @click="handleMarkAllRead">全部标为已读</button>
     </div>
 
-    <div v-if="paginatedItems.length === 0" class="empty">
+    <div v-if="compact" class="compact-header">
+      <span class="item-count">{{ filteredItems.length }} 篇</span>
+    </div>
+
+    <div v-if="displayItems.length === 0" class="empty">
       没有找到文章。
     </div>
 
-    <FeedItem
-      v-for="(item, i) in paginatedItems"
-      :key="item.link + i"
-      :item="item"
-    />
+    <div :class="{ 'compact-scroll': compact }">
+      <FeedItem
+        v-for="(item, i) in displayItems"
+        :key="item.link + i"
+        :item="item"
+        :compact="compact"
+        :active="activeArticleLink === item.link"
+        :reading-mode="!!compact"
+        @select="handleSelectArticle"
+      />
+    </div>
 
-    <button v-if="hasMore" class="load-more" @click="loadMore">
+    <button v-if="!compact && hasMore" class="load-more" @click="loadMore">
       加载更多（剩余 {{ filteredItems.length - paginatedItems.length }}）
     </button>
   </div>
@@ -360,5 +385,22 @@ watch(() => props.activeCategory, () => {
 
 .load-more:hover {
   background: var(--color-hover);
+}
+
+.feed-list.compact {
+  padding: 0;
+}
+
+.compact-header {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.compact-scroll {
+  overflow-y: auto;
+  max-height: calc(100vh - 53px - 44px - 37px);
+  padding: 4px;
 }
 </style>
