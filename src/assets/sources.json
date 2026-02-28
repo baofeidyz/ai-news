@@ -1,0 +1,772 @@
+{
+  "categories": [
+    {
+      "name": "AI, ML, Big Data News",
+      "key": "ai_ml_big_data_news",
+      "description": "News and articles about AI, Machine Learning, and Big Data",
+      "sources": [
+        {
+          "name": "404 Media",
+          "url": "https://www.404media.co/rss"
+        },
+        {
+          "name": "Ahead of AI",
+          "url": "https://magazine.sebastianraschka.com/feed"
+        },
+        {
+          "name": "AI Accelerator Institute",
+          "url": "https://aiacceleratorinstitute.com/rss/"
+        },
+        {
+          "name": "AI-TechPark",
+          "url": "https://ai-techpark.com/category/ai/feed/"
+        },
+        {
+          "name": "KnowTechie",
+          "url": "https://knowtechie.com/category/ai/feed/"
+        },
+        {
+          "name": "AI Business",
+          "url": "https://aibusiness.com/rss.xml"
+        },
+        {
+          "name": "AIModels.fyi",
+          "url": "https://aimodels.substack.com/feed"
+        },
+        {
+          "name": "AI News",
+          "url": "https://www.artificialintelligence-news.com/feed/rss/"
+        },
+        {
+          "name": "VentureBeat AI",
+          "url": "https://venturebeat.com/category/ai/feed/"
+        },
+        {
+          "name": "AI Now Institute",
+          "url": "https://ainowinstitute.org/category/news/feed"
+        },
+        {
+          "name": "SiliconANGLE AI",
+          "url": "https://siliconangle.com/category/ai/feed"
+        },
+        {
+          "name": "AI Snake Oil",
+          "url": "https://aisnakeoil.substack.com/feed"
+        },
+        {
+          "name": "Anaconda Blog",
+          "url": "https://www.anaconda.com/blog/feed"
+        },
+        {
+          "name": "Analytics India Magazine",
+          "url": "https://analyticsindiamag.com/feed/"
+        },
+        {
+          "name": "Ars Technica",
+          "url": "https://feeds.arstechnica.com/arstechnica/index"
+        },
+        {
+          "name": "Artificial Intelligence Reddit",
+          "url": "https://www.reddit.com/r/artificial/.rss"
+        },
+        {
+          "name": "The Conversation AI",
+          "url": "https://theconversation.com/europe/topics/artificial-intelligence-ai-90/articles.atom"
+        },
+        {
+          "name": "The Guardian AI",
+          "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss"
+        },
+        {
+          "name": "SpaceNews AI",
+          "url": "https://spacenews.com/tag/artificial-intelligence/feed/"
+        },
+        {
+          "name": "Futurism AI",
+          "url": "https://futurism.com/categories/ai-artificial-intelligence/feed"
+        },
+        {
+          "name": "Wired AI",
+          "url": "https://www.wired.com/feed/tag/ai/latest/rss"
+        },
+        {
+          "name": "ScienceDaily AI",
+          "url": "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml"
+        },
+        {
+          "name": "TechRepublic AI",
+          "url": "https://www.techrepublic.com/rssfeeds/topic/artificial-intelligence/"
+        },
+        {
+          "name": "Artificialis Medium",
+          "url": "https://medium.com/feed/artificialis"
+        },
+        {
+          "name": "SiliconANGLE Big Data",
+          "url": "https://siliconangle.com/category/big-data/feed"
+        },
+        {
+          "name": "Machine Learning Mastery",
+          "url": "https://machinelearningmastery.com/blog/feed"
+        },
+        {
+          "name": "David Stutz Blog",
+          "url": "https://davidstutz.de/category/blog/feed"
+        },
+        {
+          "name": "TOGETHER Blog",
+          "url": "https://www.together.xyz/blog?format=rss"
+        },
+        {
+          "name": "Neptune.ai Blog",
+          "url": "https://neptune.ai/blog/feed"
+        },
+        {
+          "name": "EleutherAI Blog",
+          "url": "https://blog.eleuther.ai/index.xml"
+        },
+        {
+          "name": "PyImageSearch",
+          "url": "https://pyimagesearch.com/blog/feed"
+        },
+        {
+          "name": "Bloomberg Technology",
+          "url": "https://feeds.bloomberg.com/technology/news.rss"
+        },
+        {
+          "name": "Business Insider",
+          "url": "https://feeds.businessinsider.com/custom/all"
+        },
+        {
+          "name": "Wired Business",
+          "url": "https://www.wired.com/feed/category/business/latest/rss"
+        },
+        {
+          "name": "Chain of Thought",
+          "url": "https://every.to/chain-of-thought/feed.xml"
+        },
+        {
+          "name": "Chip Huyen",
+          "url": "https://huyenchip.com/feed"
+        },
+        {
+          "name": "Computer Vision Reddit",
+          "url": "https://www.reddit.com/r/computervision/.rss"
+        },
+        {
+          "name": "Crunchbase News",
+          "url": "https://news.crunchbase.com/feed"
+        },
+        {
+          "name": "arXiv cs.CL",
+          "url": "https://arxiv.org/rss/cs.CL"
+        },
+        {
+          "name": "arXiv cs.CV",
+          "url": "https://arxiv.org/rss/cs.CV"
+        },
+        {
+          "name": "arXiv cs.LG",
+          "url": "https://arxiv.org/rss/cs.LG"
+        },
+        {
+          "name": "DagsHub Blog",
+          "url": "https://dagshub.com/blog/rss/"
+        },
+        {
+          "name": "Dark Reading",
+          "url": "https://www.darkreading.com/rss_simple.asp"
+        },
+        {
+          "name": "Databricks",
+          "url": "https://www.databricks.com/feed"
+        },
+        {
+          "name": "Datafloq",
+          "url": "https://datafloq.com/feed/?post_type=post"
+        },
+        {
+          "name": "Data Machina",
+          "url": "https://datamachina.substack.com/feed"
+        },
+        {
+          "name": "Datanami",
+          "url": "https://www.datanami.com/feed/"
+        },
+        {
+          "name": "Data Science Reddit",
+          "url": "https://www.reddit.com/r/datascience/.rss"
+        },
+        {
+          "name": "DebuggerCafe",
+          "url": "https://debuggercafe.com/feed/"
+        },
+        {
+          "name": "Deep Learning Reddit",
+          "url": "https://www.reddit.com/r/deeplearning/.rss"
+        },
+        {
+          "name": "DeepMind Blog",
+          "url": "https://deepmind.google/blog/feed/basic/"
+        },
+        {
+          "name": "Tech.eu Deep Tech",
+          "url": "https://tech.eu/category/deep-tech/feed"
+        },
+        {
+          "name": "Department of Product",
+          "url": "https://departmentofproduct.substack.com/feed"
+        },
+        {
+          "name": "DEV Community",
+          "url": "https://dev.to/feed"
+        },
+        {
+          "name": "EE Times",
+          "url": "https://www.eetimes.com/feed"
+        },
+        {
+          "name": "Engadget",
+          "url": "https://www.engadget.com/rss.xml"
+        },
+        {
+          "name": "Eugene Yan",
+          "url": "https://eugeneyan.com/rss/"
+        },
+        {
+          "name": "Explosion AI",
+          "url": "https://explosion.ai/feed"
+        },
+        {
+          "name": "Freethink",
+          "url": "https://www.freethink.com/feed/all"
+        },
+        {
+          "name": "Generational",
+          "url": "https://www.generational.pub/feed"
+        },
+        {
+          "name": "gHacks Technology News",
+          "url": "https://www.ghacks.net/feed/"
+        },
+        {
+          "name": "Gizmodo",
+          "url": "https://gizmodo.com/rss"
+        },
+        {
+          "name": "Global News",
+          "url": "https://globalnews.ca/tag/artificial-intelligence/feed"
+        },
+        {
+          "name": "Google AI Blog",
+          "url": "http://googleaiblog.blogspot.com/atom.xml"
+        },
+        {
+          "name": "Gradient Flow",
+          "url": "https://gradientflow.com/feed/"
+        },
+        {
+          "name": "Hacker Noon AI",
+          "url": "https://hackernoon.com/tagged/ai/feed"
+        },
+        {
+          "name": "HealthTech Magazine",
+          "url": "https://feeds.feedburner.com/HealthTechMagazine"
+        },
+        {
+          "name": "Hugging Face Blog",
+          "url": "https://huggingface.co/blog/feed.xml"
+        },
+        {
+          "name": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
+        },
+        {
+          "name": "InfoQ",
+          "url": "https://feed.infoq.com/ai-ml-data-eng/"
+        },
+        {
+          "name": "InfoWorld Analytics",
+          "url": "https://www.infoworld.com/category/analytics/index.rss"
+        },
+        {
+          "name": "InfoWorld Machine Learning",
+          "url": "https://www.infoworld.com/category/machine-learning/index.rss"
+        },
+        {
+          "name": "insideBIGDATA",
+          "url": "https://insidebigdata.com/feed"
+        },
+        {
+          "name": "Interconnects",
+          "url": "https://www.interconnects.ai/feed"
+        },
+        {
+          "name": "International Business Times",
+          "url": "https://www.ibtimes.com/rss"
+        },
+        {
+          "name": "JMLR",
+          "url": "https://www.jmlr.org/jmlr.xml"
+        },
+        {
+          "name": "KDnuggets",
+          "url": "https://www.kdnuggets.com/feed"
+        },
+        {
+          "name": "LangChain",
+          "url": "https://blog.langchain.dev/rss/"
+        },
+        {
+          "name": "Last Week in AI",
+          "url": "https://lastweekin.ai/feed"
+        },
+        {
+          "name": "Latent Space",
+          "url": "https://www.latent.space/feed"
+        },
+        {
+          "name": "Sifted",
+          "url": "https://sifted.eu/feed/?post_type=article"
+        },
+        {
+          "name": "Lightning AI",
+          "url": "https://lightning.ai/pages/feed/"
+        },
+        {
+          "name": "Machine Learning Reddit",
+          "url": "https://www.reddit.com/r/MachineLearning/.rss"
+        },
+        {
+          "name": "BMC Software ML Blog",
+          "url": "https://www.bmc.com/blogs/categories/machine-learning-big-data/feed"
+        },
+        {
+          "name": "ML@CMU",
+          "url": "https://blog.ml.cmu.edu/feed"
+        },
+        {
+          "name": "Nature Machine Learning",
+          "url": "https://www.nature.com/subjects/machine-learning.rss"
+        },
+        {
+          "name": "machinelearningnews Reddit",
+          "url": "https://www.reddit.com/r/machinelearningnews/.rss"
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/feed"
+        },
+        {
+          "name": "Microsoft Research",
+          "url": "https://www.microsoft.com/en-us/research/feed/"
+        },
+        {
+          "name": "Mila",
+          "url": "https://mila.quebec/en/feed/"
+        },
+        {
+          "name": "MIT Machine Learning",
+          "url": "https://news.mit.edu/topic/mitmachine-learning-rss.xml"
+        },
+        {
+          "name": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/feed/"
+        },
+        {
+          "name": "Mozilla Foundation Blog",
+          "url": "https://foundation.mozilla.org/en/blog/rss/"
+        },
+        {
+          "name": "NLP Reddit",
+          "url": "https://www.reddit.com/r/LanguageTechnology/.rss"
+        },
+        {
+          "name": "ScienceDaily Neural Interfaces",
+          "url": "https://www.sciencedaily.com/rss/computers_math/neural_interfaces.xml"
+        },
+        {
+          "name": "Neural Networks Reddit",
+          "url": "https://www.reddit.com/r/neuralnetworks/.rss"
+        },
+        {
+          "name": "New Scientist Technology",
+          "url": "https://www.newscientist.com/subject/technology/feed/"
+        },
+        {
+          "name": "TechXplore ML/AI",
+          "url": "https://techxplore.com/rss-feed/machine-learning-ai-news/"
+        },
+        {
+          "name": "TechXplore ML/AI (alt)",
+          "url": "https://phys.org/rss-feed/technology-news/machine-learning-ai/"
+        },
+        {
+          "name": "Nicholas Carlini",
+          "url": "https://nicholas.carlini.com/writing/feed.xml"
+        },
+        {
+          "name": "NVIDIA Technical Blog",
+          "url": "https://developer.nvidia.com/blog/feed"
+        },
+        {
+          "name": "NYT Technology",
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+        },
+        {
+          "name": "One Useful Thing",
+          "url": "https://www.oneusefulthing.org/feed"
+        },
+        {
+          "name": "Paperspace Blog",
+          "url": "https://blog.paperspace.com/rss/"
+        },
+        {
+          "name": "PetaPixel",
+          "url": "https://petapixel.com/feed"
+        },
+        {
+          "name": "Playing with AI",
+          "url": "https://erichartford.com/rss.xml"
+        },
+        {
+          "name": "Max Woolf's Blog",
+          "url": "https://minimaxir.com/post/index.xml"
+        },
+        {
+          "name": "Product Hunt",
+          "url": "https://www.producthunt.com/feed"
+        },
+        {
+          "name": "Python Insider",
+          "url": "https://feeds.feedburner.com/PythonInsider"
+        },
+        {
+          "name": "Quanta Magazine",
+          "url": "https://api.quantamagazine.org/feed"
+        },
+        {
+          "name": "Radix Medium",
+          "url": "https://medium.com/feed/radix-ai-blog"
+        },
+        {
+          "name": "R-bloggers",
+          "url": "https://feeds.feedburner.com/RBloggers"
+        },
+        {
+          "name": "Replicate Blog",
+          "url": "https://replicate.com/blog/rss"
+        },
+        {
+          "name": "Rest of World",
+          "url": "https://restofworld.org/feed/latest"
+        },
+        {
+          "name": "ScienceDaily Robotics",
+          "url": "https://www.sciencedaily.com/rss/computers_math/robotics.xml"
+        },
+        {
+          "name": "Tech.eu Robotics",
+          "url": "https://tech.eu/category/robotics/feed"
+        },
+        {
+          "name": "Scientific American",
+          "url": "http://rss.sciam.com/ScientificAmerican-Global"
+        },
+        {
+          "name": "SemiAnalysis",
+          "url": "https://www.semianalysis.com/feed"
+        },
+        {
+          "name": "Silicon Republic",
+          "url": "https://www.siliconrepublic.com/feed"
+        },
+        {
+          "name": "Simon Willison's Weblog",
+          "url": "https://simonwillison.net/atom/everything/"
+        },
+        {
+          "name": "Stack Overflow Blog",
+          "url": "https://stackoverflow.blog/feed/"
+        },
+        {
+          "name": "Stanford CRFM",
+          "url": "https://crfm.stanford.edu/feed"
+        },
+        {
+          "name": "arXiv stat.ML",
+          "url": "https://arxiv.org/rss/stat.ML"
+        },
+        {
+          "name": "Netflix Technology Blog",
+          "url": "https://medium.com/feed/@netflixtechblog"
+        },
+        {
+          "name": "ODSC Medium",
+          "url": "https://medium.com/feed/@odsc"
+        },
+        {
+          "name": "Synced",
+          "url": "https://syncedreview.com/feed"
+        },
+        {
+          "name": "Synthedia",
+          "url": "https://synthedia.substack.com/feed"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/feed/"
+        },
+        {
+          "name": "Techmeme",
+          "url": "https://www.techmeme.com/feed.xml"
+        },
+        {
+          "name": "Tech Monitor",
+          "url": "https://techmonitor.ai/feed"
+        },
+        {
+          "name": "TechSpot",
+          "url": "https://www.techspot.com/backend.xml"
+        },
+        {
+          "name": "TechTalks",
+          "url": "https://bdtechtalks.com/feed/"
+        },
+        {
+          "name": "The Algorithmic Bridge",
+          "url": "https://thealgorithmicbridge.substack.com/feed"
+        },
+        {
+          "name": "BAIR Blog",
+          "url": "https://bair.berkeley.edu/blog/feed.xml"
+        },
+        {
+          "name": "THE DECODER",
+          "url": "https://the-decoder.com/feed/"
+        },
+        {
+          "name": "The Gradient",
+          "url": "https://thegradient.pub/rss/"
+        },
+        {
+          "name": "The Information",
+          "url": "https://www.theinformation.com/feed"
+        },
+        {
+          "name": "The Intrinsic Perspective",
+          "url": "https://www.theintrinsicperspective.com/feed/"
+        },
+        {
+          "name": "The New Stack",
+          "url": "https://thenewstack.io/feed"
+        },
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/neural/feed"
+        },
+        {
+          "name": "The Register AI+ML",
+          "url": "https://www.theregister.com/software/ai_ml/headlines.atom"
+        },
+        {
+          "name": "The Rundown AI",
+          "url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml"
+        },
+        {
+          "name": "TheSequence",
+          "url": "https://thesequence.substack.com/feed"
+        },
+        {
+          "name": "TensorFlow Blog",
+          "url": "https://blog.tensorflow.org/feeds/posts/default?alt=rss"
+        },
+        {
+          "name": "The TRADE",
+          "url": "https://www.thetradenews.com/feed/"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml"
+        },
+        {
+          "name": "Towards AI",
+          "url": "https://pub.towardsai.net/feed"
+        },
+        {
+          "name": "Towards Data Science",
+          "url": "https://towardsdatascience.com/feed"
+        },
+        {
+          "name": "Unite.AI",
+          "url": "https://www.unite.ai/feed/"
+        },
+        {
+          "name": "Unwind AI",
+          "url": "https://unwindai.substack.com/feed"
+        },
+        {
+          "name": "Visual Studio Magazine",
+          "url": "https://visualstudiomagazine.com/rss-feeds/news.aspx"
+        },
+        {
+          "name": "Voicebot.ai",
+          "url": "https://voicebot.ai/feed/"
+        },
+        {
+          "name": "Weights & Biases",
+          "url": "https://wandb.ai/fully-connected/rss.xml"
+        },
+        {
+          "name": "Windows Blog",
+          "url": "https://blogs.windows.com/feed"
+        },
+        {
+          "name": "Wolfram Blog",
+          "url": "https://blog.wolfram.com/feed/"
+        }
+      ]
+    },
+    {
+      "name": "AI, ML, Big Data Podcasts",
+      "key": "podcasts",
+      "description": "Podcasts about AI, Machine Learning, and Big Data",
+      "sources": [
+        {
+          "name": "Adventures in Machine Learning",
+          "url": "https://topenddevs.com/podcasts/adventures-in-machine-learning/rss.rss"
+        },
+        {
+          "name": "AI in Financial Services Podcast",
+          "url": "https://aiandbanking.libsyn.com/rss"
+        },
+        {
+          "name": "AI Today Podcast",
+          "url": "https://feeds.blubrry.com/feeds/aitoday.xml"
+        },
+        {
+          "name": "Babbage from The Economist",
+          "url": "https://feeds.acast.com/public/shows/e421d786-ec36-4148-aa99-7a3b2928a779"
+        },
+        {
+          "name": "Data Science at Home",
+          "url": "https://datascienceathome.com/feed.xml"
+        },
+        {
+          "name": "Data Skeptic",
+          "url": "https://dataskeptic.libsyn.com/rss"
+        },
+        {
+          "name": "Data Stories",
+          "url": "https://datastori.es/feed/"
+        },
+        {
+          "name": "DataTalks.Club",
+          "url": "https://podcasters.spotify.com/pod/show/datatalksclub/rss"
+        },
+        {
+          "name": "The ChatGPT Report",
+          "url": "https://www.thechatgptreport.com/episodes?format=rss"
+        },
+        {
+          "name": "Eye On A.I.",
+          "url": "https://aneyeonai.libsyn.com/rss"
+        },
+        {
+          "name": "Geomob",
+          "url": "https://geomob-podcast.castos.com/feed"
+        },
+        {
+          "name": "Global AI - The Podcast",
+          "url": "https://podcasters.spotify.com/pod/show/globalai/rss"
+        },
+        {
+          "name": "Gradient Dissent",
+          "url": "https://feeds.captivate.fm/gradient-dissent/"
+        },
+        {
+          "name": "Harvard Data Science Review Podcast",
+          "url": "https://feed.podbean.com/hdsr/feed.xml"
+        },
+        {
+          "name": "MLOps.community",
+          "url": "https://podcasters.spotify.com/pod/show/mlops-community/rss"
+        },
+        {
+          "name": "NLP Highlights",
+          "url": "http://feeds.soundcloud.com/users/soundcloud:users:306749289/sounds.rss"
+        },
+        {
+          "name": "Not So Standard Deviations",
+          "url": "http://nssdeviations.com/rss"
+        },
+        {
+          "name": "Postgres FM",
+          "url": "https://feeds.transistor.fm/postgres-fm"
+        },
+        {
+          "name": "Practical AI",
+          "url": "https://changelog.com/practicalai/feed"
+        },
+        {
+          "name": "Talk Python To Me",
+          "url": "https://talkpython.fm/episodes/rss"
+        },
+        {
+          "name": "The AI Breakdown",
+          "url": "https://feeds.libsyn.com/468519/rss"
+        },
+        {
+          "name": "The AI in Business Podcast",
+          "url": "http://podcast.emerj.com/rss"
+        },
+        {
+          "name": "The AI Podcast",
+          "url": "http://feeds.soundcloud.com/users/soundcloud:users:264034133/sounds.rss"
+        },
+        {
+          "name": "The Artificial Intelligence Podcast",
+          "url": "https://podcasters.spotify.com/pod/show/theartificialintelligencepodcast/rss"
+        },
+        {
+          "name": "The Data Engineering Show",
+          "url": "https://feeds.transistor.fm/the-data-engineering-show"
+        },
+        {
+          "name": "The Data Exchange",
+          "url": "https://thedataexchange.media/feed/"
+        },
+        {
+          "name": "The Gradient Podcast",
+          "url": "https://api.substack.com/feed/podcast/265424/s/1354.rss"
+        },
+        {
+          "name": "The Machine Learning Podcast",
+          "url": "https://www.themachinelearningpodcast.com/rss"
+        },
+        {
+          "name": "The Marketing AI Show",
+          "url": "https://feeds.megaphone.fm/marketingai"
+        },
+        {
+          "name": "The TWIML AI Podcast",
+          "url": "https://twimlai.com/feed"
+        },
+        {
+          "name": "This Day in AI Podcast",
+          "url": "https://feeds.transistor.fm/this-day-in-ai"
+        },
+        {
+          "name": "Utilizing Tech Season 5",
+          "url": "https://podcasters.spotify.com/pod/show/intuitiveml/rss"
+        }
+      ]
+    },
+    {
+      "name": "AI, ML, Big Data Jobs",
+      "key": "jobs",
+      "description": "Job boards for AI and ML positions",
+      "sources": []
+    }
+  ]
+}
