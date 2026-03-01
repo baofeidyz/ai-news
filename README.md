@@ -1,4 +1,4 @@
-# AI RSS 聚合在线阅读
+# AI NEWS
 
 > RSS 初始数据源来于 https://github.com/foorilla/allainews_sources
 
