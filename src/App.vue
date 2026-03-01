@@ -78,7 +78,7 @@ function exitReadingMode() {
   <div class="app">
     <header class="app-header">
       <button class="menu-btn" @click="toggleSidebar">☰</button>
-      <h1>AI RSS 阅读器</h1>
+      <h1>AI NEWS</h1>
       <a class="author-link" href="https://github.com/baofeidyz/ai-rss" target="_blank" rel="noopener">by baofeidyz</a>
       <div class="header-right">
         <LanguageSelector />
