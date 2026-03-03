@@ -245,7 +245,7 @@ function onPopState() {
   position: sticky;
   top: 53px;
   overflow: hidden;
-  transition: width 0.3s ease, border-color 0.3s ease;
+  transition: width 0.4s cubic-bezier(0.32, 0.72, 0, 1), border-color 0.4s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 .sidebar.collapsed {
@@ -268,7 +268,7 @@ function onPopState() {
   flex: 1;
   min-width: 0;
   padding: 20px;
-  transition: flex 0.3s ease, max-width 0.3s ease, padding 0.3s ease;
+  transition: flex 0.4s cubic-bezier(0.32, 0.72, 0, 1), max-width 0.4s cubic-bezier(0.32, 0.72, 0, 1), padding 0.4s cubic-bezier(0.32, 0.72, 0, 1);
   overflow: hidden;
 }
 
@@ -287,7 +287,7 @@ function onPopState() {
   flex: 0 1 0%;
   min-width: 0;
   overflow: hidden;
-  transition: flex 0.3s ease;
+  transition: flex 0.4s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 .viewer-area.active {
@@ -325,7 +325,7 @@ function onPopState() {
     bottom: 0;
     width: 280px;
     z-index: 200;
-    transition: left 0.3s ease;
+    transition: left 0.4s cubic-bezier(0.32, 0.72, 0, 1);
     height: auto;
   }
 
@@ -351,7 +351,7 @@ function onPopState() {
     z-index: 199;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s cubic-bezier(0.32, 0.72, 0, 1);
   }
 
   .sidebar-overlay.open {
@@ -361,7 +361,7 @@ function onPopState() {
 
   .list-area {
     padding: 12px;
-    transition: flex 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    transition: flex 0.4s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.35s cubic-bezier(0.32, 0.72, 0, 1), padding 0.4s cubic-bezier(0.32, 0.72, 0, 1);
   }
 
   .list-area.compact {
